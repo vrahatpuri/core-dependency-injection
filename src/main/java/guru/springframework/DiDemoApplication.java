@@ -14,7 +14,9 @@ public class DiDemoApplication {
 	public static void main(String[] args) {
 		ApplicationContext ctx = SpringApplication.run(DiDemoApplication.class, args);
 		MyController controller = (MyController) ctx.getBean("myController");
+		System.out.println("---------------");
 		controller.hello();
+		System.out.println("---------------");
 
 		// Different types of dependency injections
 		System.out.println(ctx.getBean(PropertyInjectedController.class).sayHello());
